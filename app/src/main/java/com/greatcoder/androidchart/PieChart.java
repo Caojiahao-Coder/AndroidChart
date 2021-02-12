@@ -20,6 +20,7 @@ public class PieChart extends View {
     private Paint chartPaint = new Paint();
     private Paint valuePaint = new Paint();
     private Paint itemNamePaint = new Paint();
+
     private Size centerPoint;
     private int radius;
 
@@ -40,7 +41,8 @@ public class PieChart extends View {
         valuePaint.setTextSize(32f);
         valuePaint.setTextAlign(Paint.Align.CENTER);
 
-        itemNamePaint.setTextSize(32f);
+        itemNamePaint.setTextSize(48f);
+        itemNamePaint.setAntiAlias(true);
 
     }
 
@@ -62,6 +64,10 @@ public class PieChart extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         @SuppressLint("DrawAllocation") RectF rectF = new RectF(-radius, -radius, radius, radius);
+
+        float startItemTitle = -centerPoint.getHeight() + 50f;
+
+
         canvas.translate(centerPoint.getWidth(), centerPoint.getHeight());
 
 
@@ -84,7 +90,9 @@ public class PieChart extends View {
 
             startPoints += lsMyData.get(i).getValue() * eachValue;
 
+            canvas.drawText(lsMyData.get(i).getName() + " - " + lsMyData.get(i).getValue(), -centerPoint.getWidth() + 50, 50 * i + startItemTitle, itemNamePaint);
 
+            canvas.drawRect(-centerPoint.getWidth() + 10, 50 * i + startItemTitle - 32, -centerPoint.getWidth() + 40, (50 * i + startItemTitle - 32) + 30, chartPaint);
         }
 
 
