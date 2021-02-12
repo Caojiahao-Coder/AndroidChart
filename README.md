@@ -6,9 +6,9 @@
 
 ## 饼状图
 
-![实现效果分层](https://emier-md-pics2.oss-cn-beijing.aliyuncs.com/img/截屏2021-02-12 下午3.27.19.png)
+![实现效果分层](https://emier-md-pics2.oss-cn-beijing.aliyuncs.com/img/截屏2021-02-12下午3.27.19.png)
 
-![最终效果图](https://emier-md-pics2.oss-cn-beijing.aliyuncs.com/img/截屏2021-02-12 下午3.28.23.png)
+![最终效果图](https://emier-md-pics2.oss-cn-beijing.aliyuncs.com/img/截屏2021-02-12下午3.28.23.png)
 
 ```kotlin
 /*
