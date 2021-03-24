@@ -26,6 +26,5 @@ class PieChartActivity : AppCompatActivity() {
         }
 
         pieChart.bindDataSource(lsData)
-
     }
 }
